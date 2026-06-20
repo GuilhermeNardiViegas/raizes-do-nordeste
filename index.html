@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raízes do Nordeste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Login -->
+  <section class="login-screen" id="loginScreen">
+
+    <h1>Raízes do Nordeste</h1>
+
+    <p>Faça login para continuar</p>
+
+    <input
+      type="email"
+      id="email"
+      placeholder="Digite seu email"
+    >
+
+    <input
+      type="password"
+      id="senha"
+      placeholder="Digite sua senha"
+    >
+
+    <label class="checkbox">
+      <input type="checkbox" id="lgpdCheck">
+      Aceito o uso dos meus dados conforme a LGPD
+    </label>
+
+    <button onclick="fazerLogin()">
+      Entrar
+    </button>
+
+  </section>
+
+  <!-- App -->
+  <main id="mainApp" class="hidden">
+
+    <!-- Header -->
+    <header class="header">
+      <h1>Raízes do Nordeste</h1>
+      <p>Sabor nordestino na palma da mão</p>
+    </header>
+
+    <!-- Promocao -->
+    <section class="promo">
+      Promoção do dia:
+      Frete grátis acima de R$ 25 !!!
+    </section>
+
+    <!-- Unidade -->
+    <section class="card">
+
+      <h2>Escolha sua unidade</h2>
+
+      <div class="units">
+
+        <button onclick="selecionarUnidade('Recife')">
+          Recife
+        </button>
+
+        <button onclick="selecionarUnidade('Salvador')">
+          Salvador
+        </button>
+
+        <button onclick="selecionarUnidade('Fortaleza')">
+          Fortaleza
+        </button>
+
+      </div>
+
+      <p id="unidadeSelecionada">
+        Nenhuma unidade selecionada
+      </p>
+
+    </section>
+
+    <!-- Cardapio -->
+    <section class="card">
+
+      <h2>Cardápio</h2>
+
+      <div id="menu" class="menu"></div>
+
+    </section>
+
+    <!-- Carrinho -->
+    <section class="card">
+
+      <h2>Seu Pedido</h2>
+
+      <div id="cart"></div>
+
+      <h3 id="total">
+        Total: R$ 0,00
+      </h3>
+
+      <select id="paymentMethod">
+
+        <option value="">
+          Escolha a forma de pagamento
+        </option>
+
+        <option value="PIX">
+          PIX
+        </option>
+
+        <option value="Cartão">
+          Cartão
+        </option>
+
+        <option value="Dinheiro">
+          Dinheiro
+        </option>
+
+      </select>
+
+      <button class="pay-btn" onclick="finalizarPedido()">
+        Finalizar Pedido
+      </button>
+
+    </section>
+
+    <!-- Status -->
+    <section class="card">
+
+      <h2>Status do Pedido</h2>
+
+      <div class="status-container">
+
+        <div class="status-step active">
+          Pedido Recebido
+        </div>
+
+        <div class="status-step" id="preparo">
+          Em preparo
+        </div>
+
+        <div class="status-step" id="rota">
+          Saiu para entrega
+        </div>
+
+        <div class="status-step" id="final">
+          Pedido concluído
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Fidelidade -->
+    <section class="card">
+
+      <h2>Programa Fidelidade</h2>
+
+      <p id="points">
+        Você possui 0 pontos
+      </p>
+
+      <p id="reward"></p>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
