@@ -72,7 +72,7 @@
       if (!localStorage.getItem(storageKeys.loyalty)) {
         this.write(storageKeys.loyalty, {
           points: 120,
-          tier: "Mandacaru",
+          tier: "car1",
           marketing: false,
           redeemed: []
         });
@@ -412,21 +412,21 @@
     },
 
     getLoyaltyTier(points) {
-      if (points >= 220) {
-        return "Seridó";
+      if (points >= 150) {
+        return "semi";
       }
 
-      if (points >= 120) {
-        return "Mandacaru";
+      if (points >= 20) {
+        return "car1";
       }
 
-      return "Cacto";
+      return "forte";
     },
 
     getLoyalty() {
       const loyalty = this.read(storageKeys.loyalty, {
         points: 0,
-        tier: "Cacto",
+        tier: "forte",
         marketing: false,
         redeemed: []
       });
@@ -511,7 +511,7 @@
         payment: {
           method: payment.method || "pix",
           provider: payment.provider || "Gateway Nubank",
-          transactionId: payment.transactionId || "Transação em processamento",
+          transactionId: payment.transactionId || "Transação em andamento",
           consent: Boolean(payment.consent)
         },
         channel: normalizedOrder.channel || this.getCurrentChannel(),
@@ -737,7 +737,7 @@
 
         if (acceptConsentButton) {
           this.acceptConsent(false);
-          this.showToast("Consentimento salvo.");
+          this.showToast("Salvo com sucesso!");
           return;
         }
 
@@ -887,7 +887,7 @@
                     `
                   )
                   .join("")
-              : '<div class="empty-state">Nenhum pedido finalizado.</div>'
+              : '<div class="empty-state"></div>'
           }
         `;
       }
