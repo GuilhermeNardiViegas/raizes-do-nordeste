@@ -13,7 +13,7 @@ Projeto: Desenvolvimento Front-end (Raízes do Nordeste)
  Pagamento.
 
  # estrutura
-
+```
  raizes-do-nordeste/
 ├── index.html
 ├── cadastro.html
@@ -26,8 +26,7 @@ Projeto: Desenvolvimento Front-end (Raízes do Nordeste)
 ├── perfil.html
 ├── admin.html
 ├── css/
-│   ├── style.css
-│   └── responsive.css
+│   ── style.css
 ├── js/
 │   ├── app.js
 │   ├── mock.js
@@ -43,7 +42,7 @@ Projeto: Desenvolvimento Front-end (Raízes do Nordeste)
 │   ├── diagramas-atividade.md
 │   └── plano-de-testes.md
 └── README.md
-
+```
 # executar a aplicação
 
  - Abra o projeto em um servidor local simples.
