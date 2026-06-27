@@ -17,7 +17,7 @@ Validar se o projeto atende aos requisitos funcionais e nao funcionais definidos
  Resolucao mobile: `390 x 844`.
  Resolucao tablet: `768 x 1024`.
  Resolucao desktop: `1366 x 768` ou superior.
-Recomendação: limpar `localStorage` antes de executar os testes.
+ Recomendação: limpar `localStorage` antes de executar os testes.
 
 # Tabela de Casos de Teste
 

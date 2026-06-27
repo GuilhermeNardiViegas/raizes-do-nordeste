@@ -50,7 +50,7 @@ Projeto: Desenvolvimento Front-end (Raízes do Nordeste)
  - Inicie pela página index.html.
  - Para login rápido na plataforma, use:
  E-mail: guilherme@email.com
- Senha: Teste123
+ Senha: teste123
 
  Admin:
  E-mail: admin@email.com
