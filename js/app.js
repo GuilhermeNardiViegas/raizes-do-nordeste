@@ -93,9 +93,9 @@
 
     migrateSeedData() {
       const unitIdMap = {
-        "valinhos-centro": "boa-viagem",
-        "campinas-cambui": "rio-vermelho",
-        "itu-centro": "meireles"
+        "": "",
+        "": "",
+        "": ""
       };
       const users = this.getUsers();
       const migratedUsers = users.map((user) => {
