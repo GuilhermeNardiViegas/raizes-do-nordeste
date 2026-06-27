@@ -29,7 +29,7 @@
       </div>
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Resumo da cobrança</p>
+          <p class="eyebrow">Resumo</p>
           <h2>${details.unit.name}</h2>
         </div>
         <span class="tag">${getServiceModeLabel(details.serviceMode)}</span>
@@ -66,8 +66,7 @@
         <li><span>Total</span><strong>${app.formatCurrency(details.total)}</strong></li>
       </ul>
       <ul class="trust-list">
-        <li>Os dados mínimos seguem apenas para autenticação do pagamento e retorno do status.</li>
-        <li>A confirmação visual é exibida antes do redirecionamento para o acompanhamento do pedido.</li>
+        <li>Os dados seguem apenas para autenticação do pagamento.</li>
       </ul>
     `;
   }
@@ -75,15 +74,13 @@
   function updateGatewayPreview(target, method, total) {
     const labels = {
       pix: "Pix instantâneo",
-      cartao: "Cartão tokenizado",
-      "vale-refeicao": "Autorização de benefício"
-    };
+      cartao: "Cartão",
+          };
 
     target.innerHTML = `
       <strong>Integração externa</strong>
-      <p>O parceiro Nubank (Raízes do Nordeste) receberá o valor ${app.formatCurrency(total)} via ${labels[method]} com retorno visual imediato ao cliente.</p>
+      <p>O parceiro Nubank (Raízes do Nordeste) receberá o valor ${app.formatCurrency(total)} via ${labels[method]}.</p>
       <ul class="trust-list">
-        <li>Ambiente de homologação sem cobrança real.</li>
         <li>Fluxo apresentado com clareza para revisão antes do envio.</li>
       </ul>
     `;
