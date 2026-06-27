@@ -150,7 +150,7 @@ window.RAIZES_MOCK = {
       image: assetImages.baiao,
       price: 36.9,
       prepTime: "17 min",
-      tags: ["Mais pedido", "Assinatura da marca"]
+      tags: ["Mais pedido"]
     },
     {
       id: "rec-2",
@@ -161,7 +161,7 @@ window.RAIZES_MOCK = {
       image: assetImages.baiao,
       price: 47.9,
       prepTime: "25 min",
-      tags: ["Campanha ativa", "Almoço"]
+      tags: ["Almoço"]
     },
     {
       id: "rec-3",
@@ -183,25 +183,25 @@ window.RAIZES_MOCK = {
       image: assetImages.acaraje,
       price: 31.9,
       prepTime: "15 min",
-      tags: ["Tradicional", "Mais vendido no app"]
+      tags: ["Tradicional"]
     },
     {
       id: "sal-2",
       unitId: "lago-bonfim",
       category: "Combos",
-      name: "Combo Rio Vermelho",
-      description: "Acarajé, cocada cremosa e refresco da casa em preço especial.",
+      name: "Combo do Lago",
+      description: "Acarajé, cocada cremosa e um suco especial da casa!",
       image: assetImages.acaraje,
       price: 44.9,
       prepTime: "18 min",
-      tags: ["Dobro de pontos", "Combo"]
+      tags: ["Combo"]
     },
     {
       id: "sal-3",
       unitId: "lago-bonfim",
       category: "Sobremesas",
       name: "Cocada Cremosa Premium",
-      description: "Coco fresco, leite condensado e toque de canela finalizada na hora.",
+      description: "Coco fresco, leite condensado e um leve toque de canela",
       image: assetImages.cocada,
       price: 15.9,
       prepTime: "6 min",
@@ -212,7 +212,7 @@ window.RAIZES_MOCK = {
       unitId: "lago-bonfim",
       category: "Bebidas",
       name: "Refresco de Tamarindo",
-      description: "Bebida gelada com toque cítrico e final refrescante.",
+      description: "Bebida cítrica.",
       image: assetImages.drink,
       price: 11.9,
       prepTime: "4 min",
