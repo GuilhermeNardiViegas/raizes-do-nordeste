@@ -48,7 +48,7 @@
     if (guestAccess) {
       guestAccess.addEventListener("click", () => {
         app.createGuestSession();
-        app.showToast("Acesso como visitante liberado.");
+        app.showToast("Acesso liberado.");
         window.location.href = "unidades.html";
       });
     }
@@ -63,12 +63,12 @@
         const user = app.getUsers().find((entry) => entry.email.toLowerCase() === email);
 
         if (!user) {
-          app.showToast("Conta não encontrada. Use o cadastro ou entre como visitante.");
+          app.showToast("Conta não encontrada. Se cadastre agora mesmo!");
           return;
         }
 
         if (user.password !== password) {
-          app.showToast("Senha inválida para a conta informada.");
+          app.showToast("Senha inválida.");
           return;
         }
 
@@ -91,7 +91,7 @@
         const email = String(formData.get("email") || "").trim().toLowerCase();
 
         if (users.some((user) => user.email.toLowerCase() === email)) {
-          app.showToast("Já existe uma conta com esse e-mail.");
+          app.showToast("Já existe uma conta registrada com esse e-mail.");
           return;
         }
 
@@ -118,7 +118,7 @@
           marketing: newUser.marketing,
           source: registerForm.dataset.consentSource || "cadastro"
         });
-        app.showToast("Cadastro concluído com sucesso.");
+        app.showToast("Cadastro concluído.");
         window.location.href = registerForm.dataset.redirect || "unidades.html";
       });
     });

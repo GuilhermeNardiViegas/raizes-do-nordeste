@@ -135,7 +135,7 @@
             `
           )
           .join("")
-      : '<div class="empty-state">Nenhum item encontrado com esse filtro.</div>';
+      : '<div class="empty-state">Nenhum prato encontrado.</div>';
   }
 
   function renderSupportPanels(campaignTarget, cartTarget) {
@@ -149,7 +149,7 @@
     campaignTarget.innerHTML = `
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Campanhas em destaque</p>
+          <p class="eyebrow">Destaque!</p>
           <h2>Promoções da unidade</h2>
         </div>
       </div>

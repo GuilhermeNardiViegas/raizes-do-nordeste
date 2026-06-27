@@ -1,17 +1,13 @@
 const assetImages = {
   recife: "assets/img/recife.png",
-  salvador: "assets/img/salvador.ppg",
+  salvador: "assets/img/salvador.png",
   fortaleza: "assets/img/fortaleza.jpg",
-  savory: "assets/img/cardapio-prato.jpg",
-  dessert: "assets/img/cardapio-sobremesa.jpg",
-  drink: "assets/img/cardapio-bebida.jpg",
+  savory: "assets/img/cardapio.png",
   acaraje: "assets/img/acaraje.jpg",
-  cartola: "assets/img/cartola-pernambucana-otimizada.jpg",
-  dadinhos: "assets/img/dadinhos-tapioca-otimizada.jpg",
   baiao: "assets/img/baiao.png",
-  escondidinho: "assets/img/escondidinho-de-carne-seca.jpg",
+  escondidinho: "assets/img/escondidinho.jpg",
   cocada: "assets/img/cocada.jpg",
-  pudim: "assets/img/pudim-de-tapioca.jpg"
+  pudim: "assets/img/pudim.jpg"
 };
 
 window.RAIZES_MOCK = {
@@ -22,52 +18,52 @@ window.RAIZES_MOCK = {
   serviceModes: [
     { id: "retirada", label: "Retirada" },
     { id: "delivery", label: "Delivery" },
-    { id: "consumo-local", label: "Consumo no local" }
+    { id: "totem", label: "Totem" }
   ],
   units: [
     {
-      id: "boa-viagem",
-      name: "Recife - Boa Viagem",
+      id: "gracas",
+      name: "Recife - Graças",
       city: "Recife",
-      neighborhood: "Boa Viagem",
-      address: "Av. Conselheiro Aguiar, 1440",
-      hours: "11h às 23h",
+      neighborhood: "Graças",
+      address: "Av. Conselheiro Rosa e Silva, 162 - Graças, Recife - PE, 52050-225",
+      hours: "09h às 23h",
       eta: "20 a 30 min",
-      deliveryFee: 7.9,
+      deliveryFee: 8.0,
       rating: 4.8,
       status: "Aberta",
       image: assetImages.recife,
-      channels: ["web", "app"],
-      highlights: ["Cartola pernambucana", "Retirada expressa", "Promoção de almoço"]
+      channels: ["web", "app", "totem"],
+      highlights: ["Retirada expressa", "Promoção de almoço"]
     },
     {
-      id: "rio-vermelho",
-      name: "Salvador - Rio Vermelho",
+      id: "lago-bonfim",
+      name: "Salvador",
       city: "Salvador",
-      neighborhood: "Rio Vermelho",
-      address: "Rua da Paciência, 67",
-      hours: "11h às 23h30",
+      neighborhood: "Largo do Bonfim",
+      address: "Bonfim, Salvador - BA, 40415-430",
+      hours: "10h às 21h",
       eta: "25 a 35 min",
-      deliveryFee: 8.9,
+      deliveryFee: 8.1,
       rating: 4.9,
       status: "Aberta",
       image: assetImages.salvador,
-      channels: ["web", "app"],
+      channels: ["web", "app", "totem"],
       highlights: ["Acarajé da casa"]
     },
     {
-      id: "meireles",
-      name: "Fortaleza - Meireles",
+      id: "manibura",
+      name: "Fortaleza - Manibura",
       city: "Fortaleza",
-      neighborhood: "Meireles",
-      address: "Av. Beira Mar, 2180",
-      hours: "11h às 22h30",
+      neighborhood: "Parque Manibura",
+      address: "R. República da Armênia, 1098 - Parque Manibura, Fortaleza - CE, 60821-760",
+      hours: "09h às 22h",
       eta: "20 a 30 min",
-      deliveryFee: 7.5,
+      deliveryFee: 7.2,
       rating: 4.7,
       status: "Aberta",
       image: assetImages.fortaleza,
-      channels: ["web", "app"],
+      channels: ["web", "app", "totem"],
       highlights: ["Baião e tapioca", "Retirada inteligente", "Sobremesas regionais"]
     }
   ],
@@ -75,8 +71,8 @@ window.RAIZES_MOCK = {
     {
       id: "camp-1",
       title: "Almoço Raízes Recife",
-      description: "10% de desconto em pedidos acima de R$ 50 na unidade de Recife.",
-      unitId: "boa-viagem",
+      description: "Desconto em pedidos acima de R$ 50 na unidade de Recife.",
+      unitId: "gracas",
       image: assetImages.baiao,
       discountRate: 10,
       minimumOrder: 50
@@ -85,7 +81,7 @@ window.RAIZES_MOCK = {
       id: "camp-2",
       title: "Dobro de pontos no App",
       description: "Pedidos feitos no canal App recebem pontos extras na unidade de Salvador.",
-      unitId: "rio-vermelho",
+      unitId: "lago-bonfim",
       image: assetImages.acaraje,
       discountRate: 8,
       minimumOrder: 60
@@ -104,29 +100,29 @@ window.RAIZES_MOCK = {
     {
       id: "reward-1",
       title: "Cupom de R$ 10,00.",
-      points: 60,
+      points: 80,
       description: "Cupom aplicado em pedidos acima de R$ 30,00"
     },
     {
       id: "reward-2",
       title: "Cupom de R$ 20,00.",
-      points: 120,
+      points: 150,
       description: "Cupom aplicado em pedidos acima de R$ 60,00"
     },
     {
       id: "reward-3",
       title: "Cupom de R$ 30,00.",
-      points: 180,
+      points: 230,
       description: "Cupom aplicado em pedidos acima de R$ 100,00."
     }
   ],
   users: [
     {
       id: "user-1",
-      name: "Guilherme",
+      name: "guilherme",
       email: "guilherme@email.com",
       phone: "(11) 95990-1295",
-      password: "Teste123",
+      password: "teste123",
       preferredChannel: "app",
       goal: "delivery",
       marketing: true,
@@ -147,7 +143,7 @@ window.RAIZES_MOCK = {
   menuItems: [
     {
       id: "rec-1",
-      unitId: "boa-viagem",
+      unitId: "gracas",
       category: "Pratos principais",
       name: "Baião Cremoso Raízes",
       description: "Arroz, feijão verde, queijo coalho, nata da casa e carne de sol desfiada.",
@@ -158,29 +154,18 @@ window.RAIZES_MOCK = {
     },
     {
       id: "rec-2",
-      unitId: "boa-viagem",
+      unitId: "gracas",
       category: "Combos",
       name: "Combo Recife Raízes",
-      description: "Baião cremoso, dadinhos de tapioca e refresco natural da casa.",
+      description: "Baião cremoso, refresco natural da casa.",
       image: assetImages.baiao,
       price: 47.9,
-      prepTime: "19 min",
+      prepTime: "25 min",
       tags: ["Campanha ativa", "Almoço"]
     },
     {
       id: "rec-3",
-      unitId: "boa-viagem",
-      category: "Sobremesas",
-      name: "Cartola com Doce de Leite",
-      description: "Banana grelhada, queijo, canela e finalização cremosa da casa.",
-      image: assetImages.cartola,
-      price: 17.9,
-      prepTime: "15 min",
-      tags: ["Doce regional", "Queridinha"]
-    },
-    {
-      id: "rec-4",
-      unitId: "boa-viagem",
+      unitId: "gracas",
       category: "Bebidas",
       name: "Refresco de Cajá",
       description: "Bebida gelada, cítrica e natural, preparada na hora.",
@@ -191,7 +176,7 @@ window.RAIZES_MOCK = {
     },
     {
       id: "sal-1",
-      unitId: "rio-vermelho",
+      unitId: "lago-bonfim",
       category: "Pratos principais",
       name: "Acarajé Completo",
       description: "Bolinho de feijão fradinho com vatapá, camarão e salada fresca.",
@@ -202,7 +187,7 @@ window.RAIZES_MOCK = {
     },
     {
       id: "sal-2",
-      unitId: "rio-vermelho",
+      unitId: "lago-bonfim",
       category: "Combos",
       name: "Combo Rio Vermelho",
       description: "Acarajé, cocada cremosa e refresco da casa em preço especial.",
@@ -213,7 +198,7 @@ window.RAIZES_MOCK = {
     },
     {
       id: "sal-3",
-      unitId: "rio-vermelho",
+      unitId: "lago-bonfim",
       category: "Sobremesas",
       name: "Cocada Cremosa Premium",
       description: "Coco fresco, leite condensado e toque de canela finalizada na hora.",
@@ -224,7 +209,7 @@ window.RAIZES_MOCK = {
     },
     {
       id: "sal-4",
-      unitId: "rio-vermelho",
+      unitId: "lago-bonfim",
       category: "Bebidas",
       name: "Refresco de Tamarindo",
       description: "Bebida gelada com toque cítrico e final refrescante.",
@@ -235,7 +220,7 @@ window.RAIZES_MOCK = {
     },
     {
       id: "for-1",
-      unitId: "meireles",
+      unitId: "manibura",
       category: "Pratos principais",
       name: "Escondidinho da Casa",
       description: "Purê de macaxeira gratinado, carne de sol e queijo coalho tostado.",
@@ -246,10 +231,10 @@ window.RAIZES_MOCK = {
     },
     {
       id: "for-2",
-      unitId: "meireles",
+      unitId: "manibura",
       category: "Combos",
       name: "Combo Família Fortaleza",
-      description: "Escondidinho grande, dadinhos de tapioca e 2 bebidas regionais.",
+      description: "Escondidinho grande e 2 bebidas regionais.",
       image: assetImages.escondidinho,
       price: 72.9,
       prepTime: "22 min",
@@ -257,18 +242,7 @@ window.RAIZES_MOCK = {
     },
     {
       id: "for-3",
-      unitId: "meireles",
-      category: "Acompanhamentos",
-      name: "Dadinhos de Tapioca",
-      description: "Cubos crocantes com geleia de pimenta agridoce servida à parte.",
-      image: assetImages.dadinhos,
-      price: 21.9,
-      prepTime: "10 min",
-      tags: ["Perfeito para dividir", "Vegetariano"]
-    },
-    {
-      id: "for-4",
-      unitId: "meireles",
+      unitId: "manibura",
       category: "Sobremesas",
       name: "Pudim de Tapioca",
       description: "Sobremesa gelada com coco ralado fresco e calda suave de baunilha.",

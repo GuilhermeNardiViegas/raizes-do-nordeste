@@ -34,7 +34,7 @@
     target.innerHTML = `
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Fila operacional</p>
+          <p class="eyebrow">Fila</p>
           <h2>Pedidos recentes</h2>
         </div>
       </div>
@@ -55,7 +55,7 @@
                 `;
               })
               .join("")
-          : '<div class="empty-state">Nenhum pedido real ainda. Gere pedidos no fluxo cliente para alimentar este painel.</div>'
+          : '<div class="empty-state">Nenhum pedido.</div>'
       }
     `;
   }
@@ -67,20 +67,20 @@
     target.innerHTML = `
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Privacidade e qualidade</p>
+          <p class="eyebrow">Privacidade</p>
           <h2>Painel LGPD</h2>
         </div>
       </div>
       <div class="info-card">
         <h3>Status do consentimento</h3>
-        <p>${consent.accepted ? "Consentimento registrado para a interface." : "Ainda não há aceite salvo no navegador."}</p>
+        <p>${consent.accepted ? "Consentimento registrado." : "Não foi aceito no navegador."}</p>
         <p class="muted-text">Última atualização: ${consent.timestamp ? app.formatDateTime(consent.timestamp) : "não registrada"}</p>
       </div>
       ${alerts
         .map(
           (alert) => `
             <article class="campaign-card">
-              <h3>Insight operacional</h3>
+              <h3>Destaques Atuais!!</h3>
               <p>${alert}</p>
             </article>
           `
@@ -97,7 +97,7 @@
       <div class="section-heading">
         <div>
           <p class="eyebrow">Desempenho por unidade</p>
-          <h2>Visão resumida da rede</h2>
+          <h2>Visão de toda a rede Raízes</h2>
         </div>
       </div>
       ${units

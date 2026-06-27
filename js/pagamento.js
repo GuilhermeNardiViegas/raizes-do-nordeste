@@ -9,7 +9,6 @@
     const labels = {
       retirada: "Retirada",
       delivery: "Delivery",
-      "consumo-local": "Consumo no local"
     };
 
     return labels[serviceMode] || serviceMode;
@@ -36,7 +35,7 @@
         <span class="tag">${getServiceModeLabel(details.serviceMode)}</span>
       </div>
       <div class="summary-emphasis">
-        <span>Total da compra</span>
+        <span>Total</span>
         <strong>${app.formatCurrency(details.total)}</strong>
         <p>${details.unit.city} • preparo médio ${details.unit.eta} • pagamento autorizado em fluxo externo.</p>
       </div>
@@ -82,7 +81,7 @@
 
     target.innerHTML = `
       <strong>Integração externa</strong>
-      <p>O parceiro AsaPay receberá o valor ${app.formatCurrency(total)} via ${labels[method]} com retorno visual imediato ao cliente.</p>
+      <p>O parceiro Nubank (Raízes do Nordeste) receberá o valor ${app.formatCurrency(total)} via ${labels[method]} com retorno visual imediato ao cliente.</p>
       <ul class="trust-list">
         <li>Ambiente de homologação sem cobrança real.</li>
         <li>Fluxo apresentado com clareza para revisão antes do envio.</li>

@@ -5,11 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Plataforma omnicanal da Raízes do Nordeste com boas-vindas, cadastro inicial, LGPD aplicada, cardápio, pedido e fidelidade." />
+    content="Plataforma da Raízes do Nordeste com boas-vindas, LGPD aplicada, cardápio, pedido e fidelidade!" />
   <meta name="theme-color" content="#365e57" />
   <title>Raízes do Nordeste | Início</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 
 <body data-page="home">
@@ -36,12 +35,13 @@
           <div class="chip-row" aria-label="Selecione o canal de atendimento preferido">
             <button class="chip is-interactive" type="button" data-set-channel="web">Web</button>
             <button class="chip is-interactive" type="button" data-set-channel="app">App</button>
+            <button class="chip is-interactive" type="button" data-set-channel="totem">Totem</button>
           </div>
         </div>
 
         <aside class="hero-highlight">
           <figure class="hero-brand-visual">
-            <img src="assets/img/raizesdonordeste.png" alt="Pratos e identidade visual da marca Raízes do Nordeste"
+            <img src="assets/img/raizesdonordeste.png" alt="Pratos Fiéis às Raízes do Nordeste"
               width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
           </figure>
           <div>
@@ -84,6 +84,7 @@
             <select name="preferredChannel" required>
               <option value="web">Web</option>
               <option value="app">App</option>
+              <option value="totem">Totem</option>
             </select>
           </label>
 
@@ -146,11 +147,24 @@
         <a class="text-link" href="cardapio.html">Ir para cardápio</a>
       </article>
       <article class="panel shortcut-card">
-        <h2>Acompanhar Pedido</h2>
-        <p>Acompanhe pedidos, em tempo real!</p>
+        <h2>Perfil</h2>
+        <p>Veja seu perfil agora mesmo.</p>
         <a class="text-link" href="admin.html">Acompanhar!</a>
       </article>
     </section>
+
+        <section class="panel" id="home-lgpd">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Privacidade e confiança</p>
+              <h2>Utilizamos apenas os dados necessários para autenticação, histórico do pedido e comunicação do atendimento.</h2>
+            </div>
+          </div>
+
+        </section>
+      </aside>
+    </section>
+
   </main>
 
   <footer data-app-footer></footer>
