@@ -1,178 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raízes do Nordeste</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Plataforma omnicanal da Raízes do Nordeste com boas-vindas, cadastro inicial, LGPD aplicada, cardápio, pedido e fidelidade." />
+  <meta name="theme-color" content="#365e57" />
+  <title>Raízes do Nordeste | Início</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
-<body>
 
-<div class="app">
+<body data-page="home">
+  <header data-app-header></header>
 
-  <!-- Login -->
-  <section class="login-screen" id="loginScreen">
+  <main id="main-content" class="page page-home">
+    <section class="hero hero-home">
+      <div class="hero-layout">
+        <div class="hero-content">
+          <div>
+            <div class="eyebrow">Bem vindo(a)!</div>
+            <h1>Uma experiência inesquecível de comida boa!!</h1>
+          </div>
 
-    <h1>Raízes do Nordeste</h1>
+          <ul class="feature-list">
+            <li>Comida Caseira!</li>
+            <li>Sabor Único!</li>
+            <li>Programa de Fidelidade!</li>
+          </ul>
+          <div class="button-row">
+            <a class="button button-primary" href="#welcome-register-form">Criar cadastro e começar</a>
+            <a class="button button-secondary" href="#login-form">Já tenho conta</a>
+          </div>
+          <div class="chip-row" aria-label="Selecione o canal de atendimento preferido">
+            <button class="chip is-interactive" type="button" data-set-channel="web">Web</button>
+            <button class="chip is-interactive" type="button" data-set-channel="app">App</button>
+          </div>
+        </div>
 
-    <p>Faça login para continuar</p>
-
-    <input
-      type="email"
-      id="email"
-      placeholder="Digite seu email"
-    >
-
-    <input
-      type="password"
-      id="senha"
-      placeholder="Digite sua senha"
-    >
-
-    <label class="checkbox">
-      <input type="checkbox" id="lgpdCheck">
-      Aceito o uso dos meus dados conforme a LGPD
-    </label>
-
-    <button onclick="fazerLogin()">
-      Entrar
-    </button>
-
-  </section>
-
-  <!-- App -->
-  <main id="mainApp" class="hidden">
-
-    <!-- Header -->
-    <header class="header">
-      <h1>Raízes do Nordeste</h1>
-      <p>Sabor nordestino na palma da mão</p>
-    </header>
-
-    <!-- Promocao -->
-    <section class="promo">
-      Promoção do dia:
-      Frete grátis acima de R$ 25 !!!
-    </section>
-
-    <!-- Unidade -->
-    <section class="card">
-
-      <h2>Escolha sua unidade</h2>
-
-      <div class="units">
-
-        <button onclick="selecionarUnidade('Recife')">
-          Recife
-        </button>
-
-        <button onclick="selecionarUnidade('Salvador')">
-          Salvador
-        </button>
-
-        <button onclick="selecionarUnidade('Fortaleza')">
-          Fortaleza
-        </button>
-
+        <aside class="hero-highlight">
+          <figure class="hero-brand-visual">
+            <img src="assets/img/raizesdonordeste.png" alt="Pratos e identidade visual da marca Raízes do Nordeste"
+              width="1536" height="1024" loading="eager" decoding="async" fetchpriority="high" />
+          </figure>
+          <div>
+        </aside>
       </div>
-
-      <p id="unidadeSelecionada">
-        Nenhuma unidade selecionada
-      </p>
-
     </section>
 
-    <!-- Cardapio -->
-    <section class="card">
-
-      <h2>Cardápio</h2>
-
-      <div id="menu" class="menu"></div>
-
-    </section>
-
-    <!-- Carrinho -->
-    <section class="card">
-
-      <h2>Seu Pedido</h2>
-
-      <div id="cart"></div>
-
-      <h3 id="total">
-        Total: R$ 0,00
-      </h3>
-
-      <select id="paymentMethod">
-
-        <option value="">
-          Escolha a forma de pagamento
-        </option>
-
-        <option value="PIX">
-          PIX
-        </option>
-
-        <option value="Cartão">
-          Cartão
-        </option>
-
-        <option value="Dinheiro">
-          Dinheiro
-        </option>
-
-      </select>
-
-      <button class="pay-btn" onclick="finalizarPedido()">
-        Finalizar Pedido
-      </button>
-
-    </section>
-
-    <!-- Status -->
-    <section class="card">
-
-      <h2>Status do Pedido</h2>
-
-      <div class="status-container">
-
-        <div class="status-step active">
-          Pedido Recebido
+    <section class="grid grid-two onboarding-grid">
+      <article class="panel panel-accent">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Cadastro</p>
+          </div>
         </div>
+        <p>
+          Não se esqueça de conferir se todos os dados estão de acordo!
+        </p>
+        <form id="welcome-register-form" class="form-grid form-large" data-register-form
+          data-consent-source="boas-vindas">
+          <label class="field">
+            <span>Nome completo</span>
+            <input type="text" name="name" autocomplete="name" placeholder="Por favor, digite seu nome completo." required />
+          </label>
+          <label class="field">
+            <span>E-mail</span>
+            <input type="email" name="email" autocomplete="email" inputmode="email" placeholder="@email.com"
+              required />
+          </label>
+          <label class="field">
+            <span>Telefone</span>
+            <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required />
+          </label>
+          <label class="field">
+            <span>Senha</span>
+            <input type="password" name="password" autocomplete="new-password" minlength="6"
+              placeholder="Digite sua senha." required />
+          </label>
+          <label class="field">
+            <span>Preferencia de Aplicativo</span>
+            <select name="preferredChannel" required>
+              <option value="web">Web</option>
+              <option value="app">App</option>
+            </select>
+          </label>
 
-        <div class="status-step" id="preparo">
-          Em preparo
-        </div>
+          <div class="notice inline-note">
+            <strong>Aplicação prática da LGPD</strong>
+            <p>Coletamos apenas os dados essenciais para autenticação, histórico de pedidos, suporte ao cliente e programas de fidelidade</p>
+          </div>
+          <label class="checkbox-field">
+            <input type="checkbox" name="consent" required />
+            <span>Concordo com o uso dos meus dados para criar a conta e histórico de pedidos.</span>
+          </label>
+          <label class="checkbox-field">
+            <input type="checkbox" name="marketing" />
+            <span>Autorizo receber anúncios personalizados!</span>
+          </label>
+          <div class="form-actions">
+            <button class="button button-primary" type="submit">Criar conta e entrar!</button>
+            <a class="button button-secondary" href="cadastro.html">Abrir meu cadastro.</a>
+          </div>
+        </form>
+      </article>
 
-        <div class="status-step" id="rota">
-          Saiu para entrega
-        </div>
+      <aside class="stack-grid">
+        <section class="panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Já sou cliente</p>
+              <h2>Acesse sua conta</h2>
+            </div>
+          </div>
+          <form id="login-form" class="form-grid" data-login-form>
+            <label class="field">
+              <span>E-mail</span>
+              <input type="email" name="email" autocomplete="email" inputmode="email" placeholder="@email.com"
+                required />
+            </label>
+            <label class="field">
+              <span>Senha</span>
+              <input type="password" name="password" autocomplete="current-password" placeholder="Digite sua senha"
+                required />
+            </label>
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Entrar</button>
+              <button class="button button-secondary" id="guest-access" type="button">Entrar como visitante</button>
+            </div>
+          </form>
+        </section>
 
-        <div class="status-step" id="final">
-          Pedido concluído
-        </div>
-
-      </div>
-
+      </aside>
     </section>
 
-    <!-- Fidelidade -->
-    <section class="card">
-
-      <h2>Programa Fidelidade</h2>
-
-      <p id="points">
-        Você possui 0 pontos
-      </p>
-
-      <p id="reward"></p>
-
+    <section class="grid grid-three">
+      <article class="panel shortcut-card">
+        <h2>Unidades</h2>
+        <p>Escolha a loja para ver o cardápio!.</p>
+        <a class="text-link" href="unidades.html">Ir para unidades</a>
+      </article>
+      <article class="panel shortcut-card">
+        <h2>Cardápio</h2>
+        <a class="text-link" href="cardapio.html">Ir para cardápio</a>
+      </article>
+      <article class="panel shortcut-card">
+        <h2>Acompanhar Pedido</h2>
+        <p>Acompanhe pedidos, em tempo real!</p>
+        <a class="text-link" href="admin.html">Acompanhar!</a>
+      </article>
     </section>
-
   </main>
 
-</div>
+  <footer data-app-footer></footer>
 
-<script src="script.js"></script>
-
+  <script src="js/mock.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
 </body>
+
 </html>
