@@ -2,7 +2,6 @@ const assetImages = {
   recife: "assets/img/recife.png",
   salvador: "assets/img/salvador.png",
   fortaleza: "assets/img/fortaleza.jpg",
-  savory: "assets/img/cardapio.png",
   acaraje: "assets/img/acaraje.jpg",
   baiao: "assets/img/baiao.png",
   escondidinho: "assets/img/escondidinho.jpg",
@@ -31,7 +30,7 @@ window.RAIZES_MOCK = {
       hours: "09h às 23h",
       eta: "20 a 30 min",
       deliveryFee: 8.0,
-      rating: 4.8,
+      rating: 4.9,
       status: "Aberta",
       image: assetImages.recife,
       channels: ["web", "app", "totem"],
@@ -89,7 +88,7 @@ window.RAIZES_MOCK = {
     },
     {
       id: "camp-3",
-      title: "Combo Família do Sertão",
+      title: "Combo Família",
       description: "Desconto automático em pedidos acima de R$ 70 para toda a rede.",
       unitId: "all",
       image: assetImages.dessert,
@@ -146,8 +145,8 @@ window.RAIZES_MOCK = {
       id: "rec-1",
       unitId: "gracas",
       category: "Pratos principais",
-      name: "Baião Cremoso Raízes",
-      description: "Arroz, feijão verde, queijo coalho, nata da casa e carne de sol desfiada.",
+      name: "Baião Raiz",
+      description: "Arroz, feijão, queijo, nata e carne de sol.",
       image: assetImages.baiao,
       price: 36.9,
       prepTime: "17 min",
@@ -158,7 +157,7 @@ window.RAIZES_MOCK = {
       unitId: "gracas",
       category: "Combos",
       name: "Combo Recife Raízes",
-      description: "Baião cremoso, refresco natural da casa.",
+      description: "Baião, suco natural.",
       image: assetImages.baiao,
       price: 47.9,
       prepTime: "25 min",
@@ -169,21 +168,21 @@ window.RAIZES_MOCK = {
       unitId: "gracas",
       category: "Bebidas",
       name: "Refresco de Cajá",
-      description: "Bebida gelada, cítrica e natural, preparada na hora.",
+      description: "Bebida cítrica e natural.",
       image: assetImages.drink,
       price: 10.9,
       prepTime: "5 min",
-      tags: ["Natural", "Sem conservantes"]
+      tags: ["Sem conservantes"]
     },
     {
       id: "sal-1",
       unitId: "lago-bonfim",
       category: "Pratos principais",
       name: "Acarajé Completo",
-      description: "Bolinho de feijão fradinho com vatapá, camarão e salada fresca.",
+      description: "Bolo de feijão com vatapá, camarão e salada fresca.",
       image: assetImages.acaraje,
-      price: 31.9,
-      prepTime: "15 min",
+      price: 34.9,
+      prepTime: "18 min",
       tags: ["Tradicional"]
     },
     {
@@ -191,7 +190,7 @@ window.RAIZES_MOCK = {
       unitId: "lago-bonfim",
       category: "Combos",
       name: "Combo do Lago",
-      description: "Acarajé, cocada cremosa e um suco especial da casa!",
+      description: "Acarajé, cocada e um suco da casa!",
       image: assetImages.acaraje,
       price: 44.9,
       prepTime: "18 min",
@@ -202,11 +201,11 @@ window.RAIZES_MOCK = {
       unitId: "lago-bonfim",
       category: "Sobremesas",
       name: "Cocada Cremosa Premium",
-      description: "Coco fresco, leite condensado e um leve toque de canela",
+      description: "Coco, leite condensado e canela",
       image: assetImages.cocada,
       price: 15.9,
       prepTime: "6 min",
-      tags: ["Favorita", "Sobremesa da casa"]
+      tags: ["Sobremesa da casa"]
     },
     {
       id: "sal-4",
@@ -215,7 +214,7 @@ window.RAIZES_MOCK = {
       name: "Refresco de Tamarindo",
       description: "Bebida cítrica.",
       image: assetImages.drink,
-      price: 11.9,
+      price: 14.9,
       prepTime: "4 min",
       tags: ["Refrescante", "Exclusiva"]
     },
@@ -224,20 +223,20 @@ window.RAIZES_MOCK = {
       unitId: "manibura",
       category: "Pratos principais",
       name: "Escondidinho da Casa",
-      description: "Purê de macaxeira gratinado, carne de sol e queijo coalho tostado.",
+      description: "Purê, carne de sol e queijo.",
       image: assetImages.escondidinho,
-      price: 35.9,
-      prepTime: "17 min",
-      tags: ["Campeão de vendas", "Forno"]
+      price: 29.9,
+      prepTime: "20 min",
+      tags: ["Forno"]
     },
     {
       id: "for-2",
       unitId: "manibura",
       category: "Combos",
-      name: "Combo Família Fortaleza",
+      name: "Combo Familia 2/3 Pessoas",
       description: "Escondidinho grande e 2 bebidas regionais.",
       image: assetImages.escondidinho,
-      price: 72.9,
+      price: 79.9,
       prepTime: "22 min",
       tags: ["Ideal para compartilhar", "Família"]
     },
@@ -246,11 +245,11 @@ window.RAIZES_MOCK = {
       unitId: "manibura",
       category: "Sobremesas",
       name: "Pudim de Tapioca",
-      description: "Sobremesa gelada com coco ralado fresco e calda suave de baunilha.",
+      description: "Sobremesa de coco com baunilha.",
       image: assetImages.pudim,
       price: 16.9,
       prepTime: "7 min",
-      tags: ["Doce regional", "Final perfeito"]
+      tags: ["Doce regional"]
     }
   ],
   adminAlerts: [
