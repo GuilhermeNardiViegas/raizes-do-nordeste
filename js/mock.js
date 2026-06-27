@@ -7,7 +7,8 @@ const assetImages = {
   baiao: "assets/img/baiao.png",
   escondidinho: "assets/img/escondidinho.jpg",
   cocada: "assets/img/cocada.jpg",
-  pudim: "assets/img/pudim.jpg"
+  pudim: "assets/img/pudim.jpg",
+  cardapio: "assets/img/cardapio-banner.png"
 };
 
 window.RAIZES_MOCK = {

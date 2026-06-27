@@ -123,8 +123,9 @@ grid-template-columns:1.1fr .9fr;
 align-items:center;
 
 gap:60px;
+itemmenu {
 
-}
+}}
 
 .hero-content{
 
@@ -1188,4 +1189,87 @@ transition:all .3s ease;
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.cardapio-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    background: #fff;
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 30px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.banner-texto {
+    flex: 1;
+}
+
+.banner-texto h1 {
+    margin: 10px 0;
+}
+
+.banner-texto p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.cardapio-banner img {
+    width: 380px;
+    max-width: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+/*  Responsividade Cardapio */
+
+@media (max-width: 768px) {
+
+    .cardapio-banner {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .cardapio-banner img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    .banner-texto h1 {
+        font-size: 1.8rem;
+    }
+
+    .banner-texto p {
+        font-size: .95rem;
+    }
+
+}
+
+.menu-card{
+    overflow:hidden;
+}
+
+.menu-item-photo{
+    width:100%;
+    height:220px;
+    overflow:hidden;
+}
+
+.menu-item-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.3s;
+}
+
+.menu-card:hover .menu-item-photo img{
+    transform:scale(1.05);
 }

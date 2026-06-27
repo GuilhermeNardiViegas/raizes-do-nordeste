@@ -5,7 +5,6 @@
     const labels = {
       retirada: "Retirada no balcão",
       delivery: "Entrega no endereço",
-      "consumo-local": "Consumo no local"
     };
 
     return labels[serviceMode] || serviceMode;
