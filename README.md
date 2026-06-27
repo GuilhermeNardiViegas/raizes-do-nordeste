@@ -39,10 +39,11 @@ Projeto: Desenvolvimento Front-end (Raízes do Nordeste)
 │   ├── fidelidade.js
 │   └── admin.js
 ├── documentos/
-│   ├── diagramas-atividade.md
+│   ├── diagrama.md
 │   └── plano-de-testes.md
 └── README.md
 ```
+
 # executar a aplicação
 
  - Abra o projeto em um servidor local simples.
