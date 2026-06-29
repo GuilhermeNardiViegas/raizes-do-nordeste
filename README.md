@@ -38,9 +38,6 @@ Projeto: Desenvolvimento Front-end (Raízes do Nordeste)
 │   ├── pedido.js
 │   ├── fidelidade.js
 │   └── admin.js
-├── documentos/
-│   ├── diagrama.md
-│   └── plano-de-testes.md
 └── README.md
 ```
 
